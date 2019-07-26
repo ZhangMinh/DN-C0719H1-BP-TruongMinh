@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Chuyển đổi tiền tệ</title>
+    </head>
+
+<body>
+    
+        Amount:<input type="number" value="" size="30" id="tong" />
+        <br>
+        From Currency:<select id="from">
+                <option value="USD" id="USDfrom">USD</option>
+                <option value="VND" id="VNDfrom">VND</option>
+            </select>         
+        </br>
+        To Currency:<select id="to">
+            <option value="USD" id="USDto">USD</option>
+            <option value="VND" id="VNDto">VND</option>
+        </select>            
+    
+    
+    <button type="button" onclick="ketqua()">Convert</button>
+    <p id="hienthi"></p>
+    
+    
+
+    <script>
+        function ketqua() {
+            if ((document.getElementById("from").value==("USD")) && (document.getElementById("to").value==("VND")))
+            {let a = parseFloat(document.getElementById("tong").value)*23000;
+            document.getElementById("hienthi").innerHTML = "Kết quả:" + a
+            }
+            else if ((document.getElementById("from").value==("VND")) && (document.getElementById("to").value==("USD")))
+            {let b = parseFloat(document.getElementById("tong").value)/23000;
+            document.getElementById("hienthi").innerHTML = "Kết quả:" + b
+            }
+        else document.getElementById("hienthi").innerHTML = "Vui lòng chọn đơn vị tiền tệ chuyển đổi."
+    
+                      
+            
+        }
+    </script>
+
+</body>
+
+</html>
