@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>SWITCH CASE</title>
+    </head>
+    <body>
+        <button type="button" onclick="sosanh()">START</button>
+        <script>
+        function sosanh(){
+            let value = parseFloat(prompt('Type a number', 0));
+            let xem = (value < 0) ? true:false;
+            switch (xem){
+                case (true):
+                alert(-1);
+                break;
+                case (false):{
+                    if (value == 0)
+                    alert(0);
+                    else
+                alert(1);
+                break;
+                }
+                
+               
+            }
+
+
+        }
+        </script>
+    </body>
+</html>

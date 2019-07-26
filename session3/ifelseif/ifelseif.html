@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>IF ELSE IF </title>
+</head>
+
+<body>
+    <button type="button" onclick="cauhoi()">START</button>
+    <script>
+        function cauhoi() {
+            //alert("AI ĐÓ HÈ?");
+            let a = prompt("AI ĐÓ HÈ?");
+            if (a == "admin") {
+                let b = prompt("Vui lòng nhập mật khẩu.");
+                if (b == "The Master") {
+                    alert("Welcome!");
+                } else if (b == "") {
+                    alert("Canceled!");
+                }
+                else {
+                    alert("Wrong password...");
+                }
+            } else if (a == "") {
+                alert("Canceled");
+            } else alert("I don’t know you");
+
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>
