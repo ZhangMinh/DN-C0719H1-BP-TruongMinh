@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Kiểm tra năm nhuận</title>
+</head>
+<body>
+    Nhập vào năm hiện tại:<input type="number" id="nam" />
+    <button type="button" onclick="kiemtra()">Check</button>
+    <p id="hienthi"></p>
+    <script>
+    function kiemtra() {
+        let year = parseInt(document.getElementById("nam").value);
+        if (((year % 4 == 0) &&  (year % 100 != 0))  || ((year % 100 ==0) && (year % 400 ==0)))
+        document.getElementById("hienthi").innerHTML = "NĂM NHUẬN"
+        else 
+        document.getElementById("hienthi").innerHTML = "KHÔNG PHẢI NĂM NHUẬN"
+    }
+    </script>
+</body>
+</html>
