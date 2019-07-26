@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Chuyển đổi nhiệt độ</title>
+    <h1>Nhập vào độ C</h1>
+</head>
+
+<body>
+    
+            <input type="number" value="" size="30" id="c" />
+            
+    
+    
+    <button type="button" onclick="ketqua()">Đổi</button>
+    <p id="hienthi"></p>
+    
+    
+
+    <script>
+        function ketqua() {
+            
+            let c = parseFloat (document.getElementById("c").value);
+            let f = c*9/5 + 32;
+            document.getElementById("hienthi").innerHTML = "Độ F: " + f
+                      
+            
+        }
+    </script>
+
+</body>
+
+</html>

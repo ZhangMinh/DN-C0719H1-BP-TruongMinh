@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Tính diện tích hình tròn</title>
+    <h1>Nhập vào bán kính R </h1>
+</head>
+
+<body>
+    
+            <input type="number" value="" size="30" id="r" />
+            
+    
+    
+    <button type="button" onclick="ketqua()">Diện tích</button>
+    <p id="hienthi"></p>
+    
+    
+
+    <script>
+        function ketqua() {
+            
+            let r = parseFloat (document.getElementById("r").value);
+            let s = 3.14*r*r;
+            document.getElementById("hienthi").innerHTML = "Diện tích là: " + s
+                      
+            
+        }
+    </script>
+
+</body>
+
+</html>

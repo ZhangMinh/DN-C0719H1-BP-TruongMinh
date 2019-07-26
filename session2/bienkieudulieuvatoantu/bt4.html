@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Tính chu vi hình tròn</title>
+    <h1>Nhập vào bán kính R </h1>
+</head>
+
+<body>
+    
+            <input type="number" value="" size="30" id="r" />
+            
+    
+    
+    <button type="button" onclick="ketqua()">Diện tích</button>
+    <p id="hienthi"></p>
+    
+    
+
+    <script>
+        function ketqua() {
+            
+            let r = parseFloat (document.getElementById("r").value);
+            let c = 3.14*2*r;
+            document.getElementById("hienthi").innerHTML = "Chu vi là: " + c 
+                      
+            
+        }
+    </script>
+
+</body>
+
+</html>

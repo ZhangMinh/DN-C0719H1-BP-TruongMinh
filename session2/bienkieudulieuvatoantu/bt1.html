@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Điểm thi đại học</title>
+</head>
+
+<body>
+    <form>
+            Điểm toán:<input type="number" value="" size="30" id="a" />
+    </br>
+</br> 
+            Điểm lý:            <input type="number" value="" size="30" id="b" />
+    </br>
+</br>    
+            Điểm hoá:  <input type="number" value="" size="30" id="c" />
+    </form>
+    
+    <button type="button" onclick="ketqua()">Kết quả</button>
+    <p id="hienthi"></p>
+    <p id="hienthi1"></p>
+    
+
+    <script>
+        function ketqua() {
+            let a = parseFloat (document.getElementById("a").value);
+            let b = parseFloat (document.getElementById("b").value);
+            let c = parseFloat (document.getElementById("c").value);
+            let tong = a + b + c;
+            let trungbinhcong = tong/3;
+            document.getElementById("hienthi").innerHTML =  "Tổng điểm là: " +tong
+            
+            document.getElementById("hienthi1").innerHTML =  "Điểm trung bình: " +trungbinhcong
+        }
+    </script>
+
+</body>
+
+</html>
