@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Ứng dụng máy tính</title>
+    <h1>Calculator</h1>
+    <h3>Nhập vào hai số a&b để thực hiện phép tính</h3>
+
+</head>
+
+<body>
+    A:<input type="number" value="" size="30" id="a" />
+    B:<input type="number" value="" size="30" id="b" />
+    <button type="button" onclick="hamcong()">Cộng</button>
+    <button type="button" onclick="hamtru()">Trừ</button>
+    <button type="button" onclick="hamnhan()">Nhân</button>
+    <button type="button" onclick="hamchia()">Chia</button>
+    <p id="ketquapheptinh"></p>
+
+    <script>
+        function hamcong() {
+            let a =parseInt (document.getElementById("a").value);
+            let b =parseInt (document.getElementById("b").value);
+            let ketqua = a + b;
+            document.getElementById("ketquapheptinh").innerHTML = "Kết quả là:" + ketqua
+                }
+                function hamtru() {
+            let a =parseInt (document.getElementById("a").value);
+            let b =parseInt (document.getElementById("b").value);
+            let ketqua = a - b;
+            document.getElementById("ketquapheptinh").innerHTML = "Kết quả là:" + ketqua
+                }
+                function hamnhan() {
+            let a =parseInt (document.getElementById("a").value);
+            let b =parseInt (document.getElementById("b").value);
+            let ketqua = a * b;
+            document.getElementById("ketquapheptinh").innerHTML = "Kết quả là:" + ketqua
+                }
+                function hamchia() {
+            let a =parseInt (document.getElementById("a").value);
+            let b =parseInt (document.getElementById("b").value);
+            let ketqua = a / b;
+            document.getElementById("ketquapheptinh").innerHTML = "Kết quả là:" + ketqua
+                }
+    </script>
+
+</body>
+
+</html>
