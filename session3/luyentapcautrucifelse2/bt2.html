@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Chuyển đổi độ dài</title>
+    </head>
+
+<body>
+    
+        Nhiệt độ:<input type="number" value="" size="30" id="nhapvao" />
+        <br>
+        From :<select id="from">
+                <option value="m" >met</option>
+                <option value="ft" >feet</option>
+            </select>         
+        </br>
+        To :<select id="to">
+            <option value="m" >met</option>
+            <option value="ft" >feet</option>
+            </select>            
+    
+    
+    <button type="button" onclick="ketqua()">Convert</button>
+    <p id="hienthi"></p>
+        <script>
+    function ketqua() {
+        let dodai = parseFloat(document.getElementById("nhapvao").value);
+        let dodaichuyen = 0;
+        let from=document.getElementById("from");
+        let to=document.getElementById("to");
+        let hienthi = document.getElementById("hienthi");
+        if (from.value=="m" && to.value=="ft"){
+            dodaichuyen = dodai * 3.2808;
+            hienthi.innerText = "Kết quả:" + dodaichuyen;
+        }
+        else if (from.value=="ft" && to.value=="m"){
+            dodaichuyen = dodai / 3.2808;
+            hienthi.innerText = "Kết quả:" + dodaichuyen;
+        }
+        
+        else document.getElementById("hienthi").innerText = "Vui lòng chọn đơn vị độ dài chuyển đổi."
+        
+
+    } 
+        
+    
+    </script>
+
+</body>
+
+</html>

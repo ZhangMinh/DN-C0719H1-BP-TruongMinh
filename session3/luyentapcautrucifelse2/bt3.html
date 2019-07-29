@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Tính diện tích hình vuông</title>
+        <h1>Tính diện tích hình vuông khi biết cạnh a?</h1>
+    </head>
+    <body>
+        Nhập a: <input type="number" value="" id="canh">
+        <button type="button" onclick="dientich()">Tính</button>
+        <p id="hienthi"></p>
+        <script>
+        function dientich() {
+            let s = 0;
+            let a = parseFloat(document.getElementById("canh").value);
+            s=a*a;
+            document.getElementById("hienthi").innerText = "Diện tích là: " + s;
+        }
+        </script>
+    </body>
+</html>

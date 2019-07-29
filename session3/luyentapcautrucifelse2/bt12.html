@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Tính lãi ngân hàng</title>
+    </head>
+    <body>
+        Số tiền gửi:<input type="text" value="đ/v triệu đồng" id="tien">
+        Số tháng gửi:<input type="text" value="Tháng" id="thang">
+        Lãi suất:<input type="text" value="phần trăm/Tháng" id="laisuat">
+        <button type="button" onclick="tinh()">Tính</button>
+        <script>
+            function tinh() {
+                let money = parseFloat(document.getElementById("tien").value);
+                let month = parseFloat(document.getElementById("thang").value);
+                let lai = parseFloat(document.getElementById("laisuat").value);
+                let i;
+                let tienlai= (1+lai)Math.pow(month);               
+                alert('dsfssd');
+            }
+
+        </script>
+    </body>
+</html>

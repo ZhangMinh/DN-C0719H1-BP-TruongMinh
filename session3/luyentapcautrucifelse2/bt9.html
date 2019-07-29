@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Kiểm tra 3 cạnh của tam giác</title>
+    <h1>Kiểm tra 3 cạnh của tam giác</h1>
+    <h2>Gọi 3 cạnh lần lượt là a,b,c</h2>
+</head>
+
+<body>
+    Nhập a: <input type="number" value="0" id="hesoa">
+    Nhập b: <input type="number" value="0" id="hesob">
+    Nhập c: <input type="number" value="0" id="hesoc">
+    <button type="button" onclick="timx()">START</button>
+    <p id="hienthi"></p>
+    <script>
+
+        function timx() {
+            let a = parseFloat(document.getElementById("hesoa").value);
+            let b = parseFloat(document.getElementById("hesob").value);
+            let c = parseFloat(document.getElementById("hesoc").value);
+            let hienthi = document.getElementById("hienthi");
+            if (a>0 && b>0 && c>0) {
+                if (a+b>c || b+c>a || c+a>b)
+                hienthi.innerText="Đây là 3 cạnh của một tam giác.";
+            }else hienthi.innerText="Đây không phải một tam giác."
+            
+
+        }
+    </script>
+</body>
+
+</html>

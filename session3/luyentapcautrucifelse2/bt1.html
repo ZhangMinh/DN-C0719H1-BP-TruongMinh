@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Chuyển đổi nhiệt độ</title>
+    </head>
+
+<body>
+    
+        Nhiệt độ:<input type="number" value="" size="30" id="nhapvao" />
+        <br>
+        From :<select id="from">
+                <option value="C" >doC</option>
+                <option value="F" >doF</option>
+            </select>         
+        </br>
+        To :<select id="to">
+            <option value="F" >doF</option>
+            <option value="C" >doC</option>
+            </select>            
+    
+    
+    <button type="button" onclick="ketqua()">Convert</button>
+    <p id="hienthi"></p>
+        <script>
+    function ketqua() {
+        let nhdo = parseFloat(document.getElementById("nhapvao").value);
+        let nhdochuyen = 0;
+        let from=document.getElementById("from");
+        let to=document.getElementById("to");
+        let hienthi = document.getElementById("hienthi");
+        if (from.value=="C" && to.value=="F"){
+            nhdochuyen = nhdo*9/5+32;
+            hienthi.innerText = "Kết quả:" + nhdochuyen;
+        }
+        else if (from.value=="F" && to.value=="C"){
+            nhdochuyen = (nhdo-32)*5/9;
+            hienthi.innerText = "Kết quả:" + nhdochuyen;
+        }
+        
+        else document.getElementById("hienthi").innerText = "Vui lòng chọn đơn vị nhiệt độ chuyển đổi."
+        
+
+    } 
+        
+    
+    </script>
+
+</body>
+
+</html>

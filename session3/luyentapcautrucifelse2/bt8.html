@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Kiểm tra tuổi người</title>
+    </head>
+    <body>
+            <h1>Kiểm tra tuổi người</h1>
+        <button type="button" onclick="kiemtra()">START</button>
+        <p id="hienthi"></p>
+        <script>
+        function kiemtra() {
+            let tuoi=prompt("Nhập vào tuổi người:","VD=1,20,64...")
+            let hienthi=document.getElementById('hienthi');
+            if (0<tuoi && tuoi<120)
+            alert("Đây là tuổi của người");
+            else alert("Đây không phải tuổi người");
+
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>Giải phương trình bậc 2</title>
+    <h1>Phương trình bậc 2</h1>
+    <h2>Dạng: ax^2 + bx + c = 0 </h2>
+</head>
+
+<body>
+    Nhập a: <input type="number" value="0" id="hesoa">
+    Nhập b: <input type="number" value="0" id="hesob">
+    Nhập c: <input type="number" value="0" id="hesoc">
+    <button type="button" onclick="timx()">Tính</button>
+    <p id="hienthi"></p>
+    <script>
+
+        function timx() {
+            let a = parseFloat(document.getElementById("hesoa").value);
+            let b = parseFloat(document.getElementById("hesob").value);
+            let c = parseFloat(document.getElementById("hesoc").value);
+            let hienthi = document.getElementById("hienthi");
+            let x = 0;
+            let x1 = 0;
+            let x2 = 0;
+            let delta = b*b - 4*a*c;
+                        
+            if (a==0 ) {
+                if (b != 0) {
+                x = -c / b;
+                hienthi.innerText = "Phương trình có nghiệm :" + x;
+            }
+            else
+                hienthi.innerText = "Phương trình vô nghiệm ";
+            } else { 
+                if (delta==0) {
+                    x=-b/2*a;
+                    hienthi.innerText = "Phương trình có nghiệm kép :" + x;
+                } else if (delta<0)
+                    hienthi.innerText = "Phương trình vô nghiệm ";
+                    else {
+                        x1=(-b+Math.sqrt(delta))/2*a;
+                        x2=(-b-Math.sqrt(delta))/2*a;
+                        hienthi.innerHTML = "<p>Phương trình có hai nghiệm phân biệt la: x1= " + x1 +"</p>"+ "<p> x2=" +x2 + "</p>";
+                        
+                    }              
+            }
+
+        }
+    </script>
+</body>
+
+</html>

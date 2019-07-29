@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Tính diện tích tam giác vuông</title>
+        <h1>Tính diện tích tam giác vuông khi biết 2 cạnh góc vuông a và b?</h1>
+    </head>
+    <body>
+        Nhập a: <input type="number" value="" id="canha">
+        Nhập b: <input type="number" value="" id="canhb">
+        <button type="button" onclick="dientich()">Tính</button>
+        <p id="hienthi"></p>
+        <script>
+        function dientich() {
+            let s = 0;
+            let a = parseFloat(document.getElementById("canha").value);
+            let b = parseFloat(document.getElementById("canhb").value);
+            s=0.5*a*b;
+            document.getElementById("hienthi").innerText = "Diện tích là: " + s;
+        }
+        </script>
+    </body>
+</html>
