@@ -3,18 +3,20 @@
         <title>Tính lãi ngân hàng</title>
     </head>
     <body>
-        Số tiền gửi:<input type="text" value="đ/v triệu đồng" id="tien">
-        Số tháng gửi:<input type="text" value="Tháng" id="thang">
-        Lãi suất:<input type="text" value="phần trăm/Tháng" id="laisuat">
+        Số tiền gửi:<input type="number" value="1500000" id="tien">
+        Số tháng gửi:<input type="number" value="6" id="thang">
+        Lãi suất:<input type="number" value="0.5" id="laisuat">
         <button type="button" onclick="tinh()">Tính</button>
+        <p id="hienthi"></p>
         <script>
             function tinh() {
                 let money = parseFloat(document.getElementById("tien").value);
                 let month = parseFloat(document.getElementById("thang").value);
                 let lai = parseFloat(document.getElementById("laisuat").value);
-                let i;
-                let tienlai= (1+lai)Math.pow(month);               
-                alert('dsfssd');
+                //let i;
+                let tienlai= money*Math.pow((1+lai),month);               
+                let trugoc = tienlai-money;
+                document.getElementById("hienthi").innerText="Tiền lãi trừ gốc là :" + trugoc;
             }
 
         </script>
