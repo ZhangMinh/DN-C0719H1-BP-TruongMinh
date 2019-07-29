@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Chỉ số cân nặng</title>
+</head>
+
+<body>
+    <h1>Nhập vào cân nặng (kg) và chiều cao (cm)</h1>
+    Cân nặng:<input type="number" value="60" id="cannang">
+    Chiều cao:<input type="number" value="174" id="chieucao">
+    <button type="button" onclick="tinhbmi()">BMI</button>
+    <script>
+        function tinhbmi() {
+            let weight = document.getElementById("cannang").value;
+            let height = document.getElementById("chieucao").value;
+            let bmi = weight / Math.pow(height / 100, 2);
+            if (bmi < 18)
+                document.write("Underweight");
+            else if (bmi < 25.0)
+                document.write("Normal");
+            else if (bmi < 30.0)
+                document.write("Overweight");
+            else
+                document.write("Obese");
+        }
+    </script>
+</body>
+
+</html>
