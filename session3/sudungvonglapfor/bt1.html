@@ -14,18 +14,19 @@
     <button type="button" onclick="xuat()">Xuất</button>
     <script>
         function xuat() {
-            let x = document.getElementById("nhapvao").value;
-            console.log(typeof (x));
+            let x = document.getElementById("nhapvao");
             let drawHTML = "";
-            if (isNaN(x) == true)
+            // kiểm tra dữ liệu vào
+            if (isNaN(x.value) == true)
                 alert("vui lòng nhập đúng");
             else {
+                let convertValue = parseInt(x.value);
                 let i;
-                for (i = 0; i <= x; i++) {
+                for (i = 0; i <= convertValue; i++) {
                     drawHTML += "The number is " + i + "<br>";
-                    
-                }document.getElementById("hienthi").innerHTML = +drawHTML;
-                
+                } 
+                document.getElementById("hienthi").innerHTML = drawHTML;
+
             }
 
         }

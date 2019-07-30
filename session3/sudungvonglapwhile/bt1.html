@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Bài tập 1</title>
+    <h7>Bài 1: Viết chương trình nhận vào một số từ hộp thoại, việc nhập kết thúc khi người dùng nhập vào giá trị -1.
+    </h7><br>
+    <h7> Mỗi giá trị nhập được sẽ được hiển thị ra và thực hiện tính tổng các giá trị đó. </h7>
+    </br>
+    </br>
+    </br>
+
+<body>
+
+    <script>
+        window.onload = xuat();
+        function xuat() {
+            let total = 0;
+            let num;
+            while (true) {
+                num = parseInt(prompt("Enter a number "));
+                alert(num);
+                if (num == -1)
+                break;
+                total += num;
+            } alert("Tổng là " + total);
+
+        }
+
+    </script>
+</body>
+</head>
+
+</html>
