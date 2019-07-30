@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Bài tập 2</title>
+    <h7>Viết chương trình nhập vào một số bất kỳ lớn hơn 0. </h7><br>
+    <h7>Tính tổng các phần tử từ 1 đến số vừa nhập vào.</h7>
+    </br>
+    </br>
+    </br>
+
+<body>
+    Nhập N:<input type="text" value="" id="nhapvao">
+    <p id="hienthi"></p>
+    <button type="button" onclick="xuat()">Xuất</button>
+    <script>
+        function xuat() {
+            let x = document.getElementById("nhapvao").value;
+            console.log(typeof (x));
+            let total=0;
+            let drawHTML = "";
+            if (isNaN(x) == true || x<0)
+                alert("vui lòng nhập đúng");
+            else {
+                let i;
+                for (i = 1; i <= x; i++) {
+                    total=total+i;     
+                }alert("Tổng là "+total);
+                
+                
+            }
+
+        }
+
+    </script>
+</body>
+</head>
+
+</html>
