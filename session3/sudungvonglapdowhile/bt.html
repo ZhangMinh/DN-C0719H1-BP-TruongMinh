@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Bài tập 1</title>
+    <h3>Nhập vào N</h3>
+    <h7>Hiển thị từ 1 đến N dùng vòng lặp for</h7>
+    </br>
+    </br>
+    </br>
+
+<body>
+    Nhập N:<input type="text" value="" id="nhapvao">
+    <p id="hienthi"></p>
+    <button type="button" onclick="xuat()">Xuất</button>
+    <script>
+        function xuat() {
+            let x = document.getElementById("nhapvao");
+            let drawHTML = "";
+            // kiểm tra dữ liệu vào
+            if (isNaN(x.value) == true)
+                alert("vui lòng nhập đúng");
+            else {
+                let convertValue = parseInt(x.value);
+                let i = 1;
+                do {
+                    drawHTML += "The number is " + i + "<br>";
+                    i++;
+                }while (i<=convertValue)
+                document.getElementById("hienthi").innerHTML = drawHTML;
+
+            }
+
+        }
+
+    </script>
+</body>
+</head>
+
+</html>

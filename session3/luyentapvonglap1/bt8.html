@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Hãy chọn số đúng</title>
+</head>
+
+<body>
+    <h3>Nhập vào một khoảng[a,b] và đoán một số</h3>
+    <h3>Nếu bạn đoán đúng, phần thưởng bất ngờ đang chờ bạn</h3>
+    <h3>Bạn có 3 lần nhập sai. Chúc may mắn</h3>
+
+    <script>
+        alert("Nhập vào khoảng [a,b]");
+        let a = parseInt(prompt("Nhập a: ", 1));
+        let b = parseInt(prompt("Nhập b: ", 10));
+        let c = Math.floor(Math.random() * b) + a;
+        
+        let step = 2;
+        while (step > -1) {
+            let d = parseInt(prompt("Đoán đê! "));
+            if (c == d) {
+                alert("Thần kì, vỗ tay.");
+                break;
+            } else {
+                alert("Sai! Chúc may mắn.");
+                alert("Số lần chơi còn lại: "+step);
+            }
+            
+                
+            step--;
+        } alert("Game over!");
+
+
+    </script>
+</body>
+
+</html>

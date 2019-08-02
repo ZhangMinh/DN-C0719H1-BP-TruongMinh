@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Bài tập 2</title>
+        <h3>Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. </h3>
+        <h3>Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.</h3>
+    </head>
+    <body>
+        <p id="hienthi"></p>
+        <script>
+        window.onload = function check() {
+            let t=parseFloat(prompt("Xin nhập vào nhiệt độ: ", 25));
+            if (t>100)
+            alert("Nóng quá giảm bớt đi");
+            else if (t<20)
+            alert("Lạnh quá tăng thêm đi");
+            else alert("Nhiệt độ là :" +t);
+        }
+        </script>
+    </body>
+</html>

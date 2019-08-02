@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Bài 2: Tính giai thừa của một số nguyên dương</title>
+</head>
+
+<body>
+    <h3>Bài 2: Tính giai thừa của một số nguyên dương</h3>
+    Nhập x: <input type="number" id="nhapvao">
+    <button type="button" onclick="tinhgiaithua()">Tính</button>
+    <script>
+        function tinhgiaithua() {
+            let nhapvao = document.getElementById("nhapvao");
+            let x = parseInt(nhapvao.value);
+            let giaithua = 1;
+            //alert(x);
+            let i = 0;
+            for (; i < x; i++) {
+                giaithua *= (x - i);
+            }
+
+            alert("Giai thừa của số x là: " + giaithua);
+        }
+    </script>
+</body>
+
+</html>

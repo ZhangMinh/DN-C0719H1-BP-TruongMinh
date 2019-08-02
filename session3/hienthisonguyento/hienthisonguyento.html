@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>số nguyên tố</title>
+    <h1>Kiểm tra và xuất ra số nguyên tố</h1>
+</head>
+
+<body>
+    Nhập vào N: <input id="nhapvao">
+    <button type="button" onclick="showsnt()">CHECK</button>
+    <p id="hienthi"></p>
+    <script>
+        function check(value) {
+            let count = 0;
+            for (let i = 1; i <= value; i++) {
+                if (value % i == 0)
+                    count++;
+            }   
+            if (count == 2) {
+                return true;
+                return false;
+            }
+            //console.log(i);
+        }
+
+        function showsnt() {
+            let number = document.getElementById("nhapvao");
+            let i = 2;
+            let count = 0;
+            let show = "";
+            while (true) {
+                if (check(i) == true) {
+                    count++;
+                    show += "<p>" + i + "</p>";
+                }
+                i++;
+                if (count == number.value)
+                    break;
+            }
+            document.getElementById("hienthi").innerHTML = show;
+
+        }
+    </script>
+</body>
+
+</html>

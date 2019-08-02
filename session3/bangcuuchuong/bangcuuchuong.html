@@ -1,0 +1,22 @@
+<html>
+<head>
+   <title>Bảng cửu chương</title>
+</head>
+<body>
+   <h3>Hiển thị ra bảng cửu chương.</h3>
+   <p id="hienthi"></p>
+   <script>
+       let show = "";
+       let ketqua=0;
+       for (let x = 2; x <= 9; x++) {
+           document.write("<li>")
+           for (let i = 1; i <= 10; i++) {
+               ketqua = x * i;
+               show +="<td>" +x + "x"+i+"=" + ketqua + "<br></td></tr>";
+
+           }document.write("</li>")
+       }
+       document.write(show);
+   </script>
+</body>
+</html>
