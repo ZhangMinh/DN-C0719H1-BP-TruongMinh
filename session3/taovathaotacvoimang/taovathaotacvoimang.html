@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Tạo và thao tác với mảng</title>
+</head>
+
+<body>
+    <h3>Viết một chương trình JavaScript để thêm vào các phần tử trong một mảng và hiển thị chúng.</h3>
+    Input: <input type="text" id="nhapvao" value="">
+    <button type="button" onclick="hamnhap()">Add</button>
+    <button type="button" onclick="hamxuat()">Display</button>
+    <p id="hienthi"></p>
+    <script>
+        let mang = [];
+        alert(mang);
+        let count = 0;
+        function hamnhap() {
+            let input = document.getElementById("nhapvao");
+            mang.push(input.value);
+            input.value = " ";
+            count++;
+        }
+        function hamxuat() {
+            let show = "Mảng vừa nhập: ";
+            for (let i = 0; i < count; i++) {
+                show += "<br>"+mang[i]+"<br>";
+            }
+            document.getElementById("hienthi").innerHTML = show;
+        }
+        
+
+
+    </script>
+</body>
+
+</html>

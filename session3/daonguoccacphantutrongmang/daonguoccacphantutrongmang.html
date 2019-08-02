@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Đảo ngược các phần tử trong mảng</title>
+</head>
+
+<body>
+    <h3>Đảo ngược mảng.Không sử dụng hàm reverse()</h3>
+    Input: <input type="text" id="nhapvao" value="">
+    <button type="button" onclick="hamnhap()">Add</button>
+    <button type="button" onclick="hamxuat()">Display</button>
+    <button type="button" onclick="daonguoc()">Reverse</button>
+    <button type="button" onclick="xoa()">Reset</button>
+    <p id="hienthi"></p>
+    <script>
+        let mang = [];
+        let count = 0;
+        function hamnhap() {
+            let input = document.getElementById("nhapvao");
+            mang.push(input.value);
+            alert(input.value + " được nhập vào Index " + count);
+            input.value = " ";
+            count++;
+
+        }
+        function hamxuat() {
+            
+                document.getElementById("hienthi").innerHTML = "Mảng vừa nhập: " + mang;
+            
+        }
+        function daonguoc() {
+            let first = 0;
+            let last = mang.length - 1;
+            let c = 0;
+            while (first < last) {
+                c = mang[first];
+                mang[first] = mang[last];
+                mang[last] = c;
+                first++;
+                last--;
+            }
+            document.getElementById("hienthi").innerHTML = "Mảng vừa nhập: " + mang;
+        }
+        function xoa() {
+            mang = null;
+            document.getElementById("hienthi").innerText = "Nhập lại mảng";
+        }
+
+
+
+    </script>
+</body>
+
+</html>
