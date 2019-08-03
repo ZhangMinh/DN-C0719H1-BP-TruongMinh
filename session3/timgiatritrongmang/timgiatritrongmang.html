@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Tìm giá trị có trong mảng</title>
+</head>
+
+<body>
+    <h3>Viết một chương trình JavaScript để tìm một giá tri được nhập vào từ hộp thoại có nằm trong mảng hay không.</h3>
+    <h3> Nếu có in ra vị trí của phần tử đó.</h3>
+    <script>
+        let x = [];
+        for (let i = 0; i < 10; i++) {
+            x[i] = Math.floor(Math.random() * 10);
+        }
+        alert(x);
+        window.onload = function findx() {
+            let m = parseFloat(prompt("Đoán xem...."));
+            let index = 0;
+            if (isNaN(m) == true)
+                alert("Mời nhập vào một số [0,10]");
+            else {
+                while (index < 10) {
+                    if (m == x[index]) {
+                        document.write("Vị trí..." + index + "<br>");
+                    }
+                    index++;
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

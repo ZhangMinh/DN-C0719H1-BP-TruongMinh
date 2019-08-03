@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Tìm giá trị lớn nhất trong mảng</title>
+</head>
+
+<body>
+    <h3>Viết một chương trình JavaScript để tìm giá trị lớn nhất trong mảng cho trước.</h3>
+    <!-- <h3> Nếu có in ra vị trí của phần tử đó.</h3> -->
+    <script>
+        let x = [];
+        for (let i = 0; i < 10; i++) {
+            x[i] = Math.floor(Math.random() * 1000);
+        }
+        alert(x);
+        window.onload = function findmax() {
+        let max = x[1];
+        for (let i = 0; i < 10; i++) {
+            if (x[i]>max) {
+                max=x[i];
+            }
+        } document.write("Max="+max);
+        }
+    </script>
+</body>
+
+</html>
