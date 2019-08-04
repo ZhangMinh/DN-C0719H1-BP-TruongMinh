@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Từ Điển Anh-Việt</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" value="enter your word" id="english">
+    </form>
+    <button type="button" onclick="dich()">Translate</button>
+<script>
+let a =[
+    ['orange','apple','watermelon','pears','peaches'],
+    ['melon','grapes','starfruit','mango','lemon'],
+    ['avocado','cherry','kiwi','raspberrie','coconut'],
+    ['pineapple','banana','blueberries','strawberries','papayas']
+];
+// alert(a);
+let b =[
+    ['cam','táo','dưa hấu','lê','đào'],
+    ['dưa gang','nho','khế','xoài','chanh'],
+    ['bơ','sơ ri','kiwi','mâm xôi đỏ','dừa'],
+    ['dứa','chuối','việt quất','dâu tây','đu đủ']
+];
+// alert(b);
+function dich() {
+    let i=0;
+    let j=0;
+    let eng=toString(document.getElementById("english").value);
+    alert(typeof(eng));
+    while (i<4 && j<5) {
+        if (eng==a[i][j]) {
+            alert("dsjfkds");
+        }
+        i++;
+        j++
+    }
+}
+</script>
+</body>
+
+</html> 

@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <title>Game CARO</title>
+</head>
+
+<body>
+
+    <p id="hienthi"></p>
+    <script>
+        let caros = [];
+        let gamerXx = [];
+        let gamerXy = [];
+        let gamerOy = [];
+
+        let gamerOx = [];
+        let show = "";
+        let turn = 0;
+        let hienthi = document.getElementById("hienthi");
+        for (let i = 0; i < 3; i++) {
+            caros[i] = ['.', '.', '.'];
+        }
+        for (i = 0; i < 3; i++) {
+            show += "<br>       ";
+            for (let j = 0; j < 3; j++) {
+                show += caros[i][j] + "       ";
+            }
+        } hienthi.innerHTML = show;
+        ////////////////////////////////////
+        //xu li nguoi choi chon lai vi tri cu 
+
+        function tim(x, y) {
+            for (let i = 0; i <= gamerXx.length; i++) {
+                if (gamerXx[i] == x) {
+                    for (let j = 0; j <= gamerXy.length; j++) {
+                        if (gamerXy[j] == y) {
+                            return false;
+                        } else return true;
+                    }
+                }
+            }
+        }
+
+        function find(x, y) {
+            for (let i = 0; i <= gamerOx.length; i++) {
+                if (gamerOx[i] == x) {
+                    for (let j = 0; j <= gamerOy.length; j++) {
+                        if (gamerOy[j] == y) {
+                            return false;
+                        } else return true;
+                    }
+                }
+            }
+        }
+
+        function change() {
+            let show = "";
+            let x = parseInt(prompt("enter x. Ex:0,1,2."));
+            let y = parseInt(prompt("enter y. Ex:0,1,2."));
+            alert(turn);
+            //luu lai vet cua nguoi choi
+            if (turn % 2 == 0) {
+                gamerXx.push(x); gamerXy.push(y);
+            }
+            else {
+                gamerOx.push(x); gamerOy.push(y);
+            }
+
+            if (isNaN(x) == true && isNaN(y) == true || x > 2 || y > 2) {
+                alert("enter again");
+            }
+            else if (tim(x, y) == false || find(x, y) == false) {
+                alert("enter again");
+            }
+            else {
+                turn += 1;
+                //luot di cua X
+                if (turn % 2 == 1) {
+                    caros[x][y] = 'X';
+                    for (let i = 0; i < 3; i++) {
+                        show += "<br>";
+                        for (let j = 0; j < 3; j++) {
+                            show += caros[i][j];
+                        }
+                    }
+                    // while ()
+                }
+                //luot di cua O
+                else {
+                    caros[x][y] = 'O';
+                    for (let i = 0; i < 3; i++) {
+                        show += "<br>";
+                        for (let j = 0; j < 3; j++) {
+                            show += caros[i][j];
+                        }
+                    }
+
+                }
+
+                hienthi.innerHTML = show;
+            }
+
+        }
+    </script>
+    <input type="button" value="Change value" onclick="change()">
+</body>
+
+</html>
