@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Luyện tập mảng 1</title>
+</head>
+
+<body>
+    <h3>Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</h3>
+    <script>
+        let mang = [];
+        for (let i = 0; i < 10; i++) {
+            mang[i] = Math.floor(Math.random() * 100) + 1;
+        }
+        function checkmax(arr) {
+            let max=arr[0];
+            for (let i = 0; i < arr.length; i++) {
+                if (max<arr[i]) {
+                    max=arr[i];
+                }
+            }
+            return max;
+        }
+        document.write(mang+"</br></br>");
+        document.write(mang.reverse());
+    </script>
+</body>
+
+</html>

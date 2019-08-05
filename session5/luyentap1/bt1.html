@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Luyện tập mảng 1</title>
+</head>
+
+<body>
+    <h3>Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. </h3>
+    <h3>Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.</h3>
+    <script>
+        let mang = [];
+        for (let i = 0; i < 10; i++) {
+            mang[i] = Math.floor(Math.random() * 100) + 1;
+        }
+        function checkupper(arr) {
+            let show = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] >= 10) {
+                    show.push(arr[i]);
+                }
+            } 
+            return show;
+        }
+        console.log(checkupper(mang));
+    </script>
+</body>
+
+</html>

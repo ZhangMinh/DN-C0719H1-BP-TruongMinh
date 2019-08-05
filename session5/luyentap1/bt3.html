@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Luyện tập mảng 1</title>
+</head>
+
+<body>
+    <h3>Bài 3- Viết chương trình khởi tạo mảng số nguyên.</h3>
+    <h3> Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.</h3>
+    <!-- <button type="button" onclick="printarr()">SHOW</button> -->
+    <script>
+        let mang = [];
+        for (let i = 0; i < 10; i++) {
+            mang[i] = Math.floor(Math.random() * 100) + 1;
+        }
+        function checkmax(arr) {
+            let max = arr[0];
+            for (let i = 0; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        function checksum(arr) {
+            let tong = 0;
+            for (let i = 0; i < arr.length; i++) {
+                tong += arr[i];
+            }
+            return tong / arr.length;
+        }
+        function printarr(arr) {
+            let show = "";
+            for (let i = 0; i < arr.length; i++) {
+                show += arr[i]+",";
+            }
+            return show;
+        }
+        document.write("mảng random là:" + printarr(mang)+"</br>");
+        document.write("giá trị trung bình của mảng là:" + checksum(mang));
+    </script>
+</body>
+
+</html>

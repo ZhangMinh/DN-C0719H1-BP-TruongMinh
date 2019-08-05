@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Luyện tập mảng 1</title>
+</head>
+
+<body>
+    <h3>Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi</h3>
+    <script>
+
+        let arr1=[-1,-2,-3,-4,2,3,4,5,6];
+        function checksoam(arr) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < 0) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        alert(checksoam(arr1));
+    </script>
+</body>
+
+</html>

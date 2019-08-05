@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+    Nhập F=<input type="number" value="" id="nhapvao" oninput="chuyendoi()"> C=
+    <span id="output"></span>
+    <script>
+        
+    function chuyendoi(f) {
+        let dof=parseFloat(document.getElementById("nhapvao").value);
+        let t=(dof-32)/1.8;
+        document.getElementById("output").innerHTML=t;
+    }
+    </script>
+</body>
+
+</html>

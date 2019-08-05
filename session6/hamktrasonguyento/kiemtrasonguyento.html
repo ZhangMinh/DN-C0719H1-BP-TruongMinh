@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+
+<body>
+    <input type="number" id="nhapvao"><span id="kiemtra">đââs</span>
+    <script>
+        function check(value) {
+            let count = 0;
+            for (let i = 0; i <= value; i++) {
+                if (value % i == 0)
+                    count++;
+            }
+            if (count == 2) {
+                return true;  
+            }
+            else  {return false;}
+        }
+        console.log(check(10));
+    </script>
+</body>
+
+</html>

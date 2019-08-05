@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Min of array</title>
+</head>
+
+<body>
+    <h3>Funtion of minarray</h3>
+    <script>
+        let array1 = [9, 0, 1, 2, 3, 4, 5, -1, 6];
+        let array2 = [0, 0, 0, 0, 0, 0];
+        let array3 = [];
+        let array4 = ['0', '0', '0', '0', '0', '0'];
+        function minarr(arr) {
+            let min = arr[0];
+            for (let i = 0; i < arr.length; i++) {
+                if (min > arr[i]) {
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+        console.log(minarr(array1));
+        console.log(minarr(array2));
+        console.log(minarr(array3));
+        console.log(minarr(array4));
+    </script>
+</body>
+
+</html>
