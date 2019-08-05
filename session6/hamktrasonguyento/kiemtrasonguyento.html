@@ -5,8 +5,10 @@
 </head>
 
 <body>
-    <input type="number" id="nhapvao"><span id="kiemtra">đââs</span>
+    <input type="number" id="nhapvao">
+    <p id="hienthi"></p>
     <script>
+        let n=parseInt(prompt("nhập vào n"));
         function check(value) {
             let count = 0;
             for (let i = 0; i <= value; i++) {
@@ -18,7 +20,17 @@
             }
             else  {return false;}
         }
-        console.log(check(10));
+        function isPrime(n) {
+            let show="1<br>";
+            for (let i=0;i<=n;i++) {
+                if (check(i)) {
+                    show+=i+"</br>";
+                }
+            }
+            return show;
+        }
+
+        document.getElementById("hienthi").innerHTML=isPrime(n);
     </script>
 </body>
 

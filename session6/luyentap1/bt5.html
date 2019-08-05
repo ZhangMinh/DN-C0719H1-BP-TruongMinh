@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>TEST</title>
+</head>
+
+<body>
+
+    <script>
+        let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let sub = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa', 'Major', 'Leo'];
+        let a = prompt("Nhap vao a");
+        function findStar(a) {
+            let index=0;
+            let i = 0;
+            while (i < 7) {
+                if (a == star[i]) {
+                    index=i;
+                    break;
+                }
+                i++;
+            }
+            return sub[index];
+        }
+        findStar(a);
+
+    </script>
+</body>
+
+</html>>
