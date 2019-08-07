@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>Quản lý sản phẩm</title>
+</head>
+
+<body>
+    <h3>ADD NEW PRODUCT</h3>
+    <form id="myForm">
+        <input type="text" placeholder="New product" id="nhapvao">
+    </form>
+    <button type="button" onclick="add()">ADD</button>
+    <h2>DISPLAY ALL PRODUCT</h2>
+    <p id="hienthi"></p>
+    <script>
+
+        let sanpham = [];
+        let show = "";
+        let b = document.getElementById("hienthi");
+        function display() {
+            for (let i = 0; i < sanpham.length; i++) {
+                show += sanpham[i] + "</br>";
+            }
+            b.innerHTML = show;
+        }
+
+        function add() {
+            let input = document.getElementById("nhapvao").value;
+            sanpham.push(input);
+            document.getElementById("myForm").reset();
+            alert("ok");
+        }
+
+        function edit(i) {
+            sanpham[i] = prompt("NEW EDIT");
+        }
+
+        function del(i) {
+            sanpham.splice(0, i);
+        }
+    </script>
+
+</body>
+
+</html>
