@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RECTANGLE</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1600" height="800" style="border:1px solid #d3d3d3;"></canvas>
+    <script>
+        //hàm lấy random 1->255
+        function getRandomHex() {
+            return Math.floor(Math.random() * 255);
+        }
+        //hàm lấy màu rgb(red,blue,green)
+        function getRandomColor() {
+            var red = getRandomHex();
+            var green = getRandomHex();
+            var blue = getRandomHex();
+            return "rgb(" + red + "," + blue + "," + green + ")";
+        }
+
+        function myRectangle(x, y) {
+            this.x = x;
+            this.y = y;
+            this.getPerimeter = function () {
+                return 2 * (x + y);
+            }
+            this.getArea = function () {
+                return x * y;
+            }
+        }
+
+        function creatRectangle() {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            let rong = parseFloat(prompt("Enter width:"));
+            let dai = parseFloat(prompt("Enter height:"));
+            let color = getRandomColor();
+            let Rectangle = new myRectangle(rong, dai);
+            ctx.beginPath();
+            ctx.lineWidth = "6";
+            ctx.fillStyle = color;
+            ctx.fillRect(350, 400, rong, dai);
+            alert("Diện tích là " + Rectangle.getArea());
+            alert("Chu vi là " + Rectangle.getPerimeter());
+        }
+        creatRectangle();
+
+    </script>
+</body>
+
+
+</html>

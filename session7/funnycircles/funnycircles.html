@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Funny circles</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1572" height="880" style="border:1px solid #d3d3d3;"></canvas>
+    <script>
+        //hàm lấy random 1->255
+        function getRandomHex() {
+            return Math.floor(Math.random() * 255);
+        }
+        //hàm lấy màu rgb(red,blue,green)
+        function getRandomColor() {
+            var red = getRandomHex();
+            var green = getRandomHex();
+            var blue = getRandomHex();
+            return "rgb(" + red + "," + blue + "," + green + ")";
+        }
+
+        function Circle(x, y, radius) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+        }
+        function creatCircle() {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            let radius = Math.floor(Math.random() * 80);
+            let x = Math.random() * window.innerWidth;
+            let y = Math.random() * window.innerHeight;
+            let color = getRandomColor();
+            // alert(color);
+            let circle = new Circle(x, y, radius);
+            ctx.beginPath();
+            ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+            ctx.fillStyle = color;
+            ctx.fill();
+        }
+
+        //auto reload mỗi 1s
+        setTimeout(function () {
+            location.reload();
+        }, 1000);
+
+        //vẽ 100 hình tròn
+        for (let i = 0; i < 100; i++) {
+            creatCircle();
+        }
+       
+    </script>
+</body>
+
+
+</html>

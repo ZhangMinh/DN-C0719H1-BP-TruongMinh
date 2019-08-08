@@ -6,18 +6,16 @@
 
 <body>
     <script>
-        let chuoi="rottor";
-        let test="metter";
+        let chuoi = "rottor";
+        let test = "metter";
         function isPalindrome(s) {
-            for (let i=0;i<s.length;i++) {
-                if (s[0]!=s[s.length-1]) {
-                    // alert("hsadka");
+            for (let i = 0; i < s.length; i++) {
+                if (s[0] != s[s.length - 1]) {
                     return false;
-                } 
+                }
                 else {
-                    alert('sajdklas');
-                    s=s.substr(1,s.length-2);
-                }       
+                    s = s.substr(1, s.length - 2);
+                }
             }
             return true;
         }

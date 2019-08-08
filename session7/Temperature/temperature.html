@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Temperature</title>
+</head>
+
+<body>
+    <script>
+        let myTemperature = function (cel) {
+            this.cel = cel;
+            this.celtofah = function () {
+                return cel * 9 / 5 + 32;
+            }
+            this.celtokelvin = function () {
+                return cel + 273;
+            }
+        }
+        let temperature = new myTemperature(25);
+        document.write("Fah: " + temperature.celtofah() + "</br>");
+        document.write("Kelvin: " + temperature.celtokelvin());
+    </script>
+</body>
+
+</html>

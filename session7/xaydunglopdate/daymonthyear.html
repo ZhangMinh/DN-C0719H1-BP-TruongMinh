@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>DATE NOW</title>
+</head>
+
+<body>
+    <h3>xây dựng lớp Date</h3>
+    <script>
+    let myDate=function(day,month,year) {
+        this.day=day;
+        this.month=month;
+        this.year=year;
+
+//Bước 2: Xây dựng phương thức trả về ngày, tháng, năm
+
+        this.getday=function() {
+            return this.day;
+        }
+        this.getmonth=function() {
+            return this.month;
+        }
+        this.getyear=function() {
+            return this.year;
+        }
+
+//Bước 3: Xây dựng phương thức thiết đặt lại giá trị các thuộc tính day, month, year
+
+        this.setday=function() {
+            this.day=day;
+        }
+        this.setmonth=function() {
+            this.month=month;
+        }
+        this.setyear=function() {
+            this.year=year;
+        }
+    }
+
+//tạo một obj date và lấy các phương thức của nó
+    let date= new myDate(07,08,2019);
+    let day=date.getday();
+    let month=date.getmonth();
+    let year=date.getyear();
+
+    alert(day+"/"+month+"/"+year);
+    </script>
+</body>
+
+</html>
