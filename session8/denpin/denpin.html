@@ -24,13 +24,13 @@
 
         }
 
-        let FlashLamp = function () {
-            this.setBattery = function (battery) {
+        let FlashLamp = function (battery) {
+            this.setBattery = function () {
                 this.battery = battery;
             }
 
             this.getBatteryInfo = function () {
-                return this.setBattery;
+                return this.battery.setBattery;
             };
 
             this.light = function () {
@@ -52,7 +52,7 @@
         let battery = new Battery();
         battery.setEnergy(10);
         let lamp = new FlashLamp();
-        lamp.getBatteryInfo(battery);
+        lamp.getBatteryInfo();
 
         // document.write("Battery info:" + lamp.getBatteryInfo() + "<br/>");
         // lamp.light();

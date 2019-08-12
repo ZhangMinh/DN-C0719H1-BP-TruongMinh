@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <title>ADAM & EVA</title>
+</head>
+
+<body>
+    <script>
+        function Apple() {
+            this.weight = 10;
+            this.getWeight = function () {
+                return this.weight;
+            }
+            this.isEmpty = function () {
+                if (this.weight == 0) {
+                    return true;
+                }
+                else alert("Apple's weight is:" + this.weight);
+            }
+            this.decrease = function () {
+                return --this.weight;
+            }
+        }
+
+        function Human(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+            // dat ten
+            this.getName = function () {
+                return this.name;
+                console.log(name);
+            }
+            this.setName = function (name) {
+                this.name = name;
+            }
+            //dat gioi tinh
+            this.getGender = function () {
+                return this.gender;
+                console.log(gender);
+            }
+            this.isMale = function () {
+                return this.gender = "Male";
+            }
+            this.isFemale = function () {
+                return this.gender = "Female";
+            }
+            //dat trong luong co the
+            this.getWeight = function () {
+                return this.weight;
+                console.log(this.weight);
+            }
+            this.setWeight = function (weight) {
+                this.weight = weight;
+            }
+            this.say = function () {
+                console.log("something...");
+            }
+            this.eat = function () {
+                if (apple.isEmpty) {
+                    apple.decrease();
+                    this.say();
+                }
+            }
+        }
+
+        let apple = new Apple();
+        apple.getWeight();
+        let adam = new Human();
+
+    </script>
+</body>
+
+</html>
