@@ -6,16 +6,16 @@
 
 <body>
     <script>
-        function Apple() {
-            this.weight = 10;
+        function Apple(weight) {
+            this.weight = weight;
             this.getWeight = function () {
                 return this.weight;
             }
-            this.isEmpty = function () {
+            this.iEmpty = function () {
                 if (this.weight == 0) {
                     return true;
                 }
-                else alert("Apple's weight is:" + this.weight);
+                else return false;
             }
             this.decrease = function () {
                 return --this.weight;
@@ -57,15 +57,16 @@
                 console.log("something...");
             }
             this.eat = function () {
-                if (apple.isEmpty) {
+                if (!apple.iEmpty()) {
                     apple.decrease();
                     this.say();
-                }
+              console.log(apple.iEmpty());
+                } else alert("het tao roi");
             }
         }
 
-        let apple = new Apple();
-        apple.getWeight();
+        let apple = new Apple(5);
+        
         let adam = new Human();
 
     </script>

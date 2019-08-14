@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>EMAIL</title>
+</head>
+
+<body>
+    <script>
+        let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        //email hop le
+        let a = 'a@gmail.com';
+        let b = 'ab@yahoo.com';
+        let c = 'abc@hotmail.com';
+        //email khong hop le 
+        let d = '@gmail.com';
+        let e = 'ab@gmail.';
+        let f = '@#abc@gmail.com';
+        alert(regex.test(a));
+    </script>
+</body>
+
+</html>

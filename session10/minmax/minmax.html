@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>MIN-MAX</title>
+</head>
+
+<body>
+    <script>
+
+        function findMin(arr) {
+            let min = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+        function findMax(arr) {
+            let max = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        function autostring() {
+            let a = [];
+            for (let i = 0; i < 10; i++) {
+                a[i] = Math.round(Math.random() * 100, 1);
+            }
+            return a;
+        }
+        let a = autostring();
+
+        document.write("String is:  " + a + "</br>");
+
+        document.write("Min of string is: " + findMin(a));
+
+        document.write("</br>Max of string is: " + findMax(a));
+
+    </script>
+</body>
+
+</html>

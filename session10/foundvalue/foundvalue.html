@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>FIND-VALUE</title>
+</head>
+
+<body>
+    <script>
+
+        function findValue() {
+            let a = autoString();
+            let value = parseInt(prompt("Enter value: "));
+            let index = [];
+            let count = 0;
+            for (let i = 1; i < a.length; i++) {
+                if (value == a[i]) {
+                    count++;
+                    index.push(i);
+                }
+            }
+            document.write("String is:  </br>");
+            dispArr(a);
+            document.write("Value is:  " + value + "</br>");
+            if (count != 0) {
+                return document.write("Found " + count + " at " + index + " position");
+            } else {
+                return document.write("Value not found!");
+            }
+
+        }
+        function autoString() {
+            let a = [];
+            for (let i = 0; i < 100; i++) {
+                a[i] = Math.round(Math.random() * 100, 1);
+            }
+            return a;
+        }
+        function dispArr(arr) {
+            let i = 0;
+            for (; i < arr.length; i++) {
+                document.write(arr[i] + "  ");
+                if ((i + 1) % 10 == 0) {
+                    document.write("</br>");
+                }
+            }
+        }
+
+        findValue();
+    </script>
+</body>
+
+</html>

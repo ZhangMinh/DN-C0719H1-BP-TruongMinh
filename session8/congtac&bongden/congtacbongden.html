@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>SWITCH AND LAMP</title>
+</head>
+
+<body>
+    <script>
+        let electricLamp = function () {
+            this.status;
+            this.turnOn = function () {
+                this.status = true;
+            }
+            this.turnOff = function () {
+                this.status = false;
+            }
+        }
+        let swButton = function () {
+            this.status;
+            this.swOn = function () {
+                this.status=true;
+            }
+            this.swOff= function() {
+                this.status=false;
+            }
+            this.connectLamp=function(lamp) {
+                if (this.status==true) {
+                    lamp.turnOn();
+                }
+                if (this.status==false) {
+                    lamp.turnOff();
+                }
+            }
+        }
+        let sw=new swButton();
+        let lamp=new electricLamp();
+        sw.swOn();
+        sw.connectLamp(lamp);
+        lamp.status;
+    </script>
+</body>
+
+</html>
