@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Game Doan so</title>
+</head>
+
+<body>
+    <script>
+        let a = Math.round(Math.random() * 100, 1);
+        let arr = [];
+        for (let i = 1; i <= 100; i++) {
+            arr[i] = i;
+        }
+
+        function binarySearch(value, list) {
+            let first = 0;
+            let last = list.length - 1;
+            let position = 0;
+            let found = false;
+            let middle;
+            while (found === false && first <= last) {
+                middle = Math.round((first + last) / 2);
+                if (list[middle] == value) {
+                    found = true;
+                    position = middle;
+                    alert("Correct");
+                }
+                else if (list[middle] > value) {
+                    alert("Too low" + list[middle]);
+                    console.log(list[middle]);
+                    last = middle - 1;
+                }
+                else {
+                    alert("Too high" + list[middle]);
+                    console.log(list[middle]);
+                    first = middle - 1;
+                }
+            }
+            return position;
+        }
+        let number = parseInt(prompt("Enter guess number:"));
+        binarySearch(number, arr);
+    </script>
+</body>
+
+</html>
